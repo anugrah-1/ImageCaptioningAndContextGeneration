@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.captionbot.ai	TRUE	/	FALSE	1999999999	ARRAffinity	f81953285be8ffabcfbab36ce46dcf4dfba3d4698f8fd02a23f65026a36d22af
+

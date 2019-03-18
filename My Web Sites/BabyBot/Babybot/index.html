@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h2 { color: #fff; }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning and Context Writing</title>
+
+
+  
+    <link href="Content/cssa9f0.css?v=N5B2tZFJw7mzvu4QGRBiDdY1SIJGd8RQU7P_SFdeXqk1" rel="stylesheet"/>
+
+    <script src="bundles/modernizr8fce?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script src="bundles/jqueryc061?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+</head>
+<body background="Images/bg.jpg">
+    <div id="fb-root"></div>
+    <div id="header">
+        <div id="headertext">
+            <a href="index.html">Image Captioning and Context Writing</a>
+        </div>
+    </div>    
+
+<input id="api-endpoint" hidden value="https://BabyBot.azurewebsites.net"/>
+
+    <div class="col col-lg-6 col-lg-offset-3">           
+            <div id="thumbContainer" hidden style="padding-left: 0; position: center;">
+                 <textarea rows="2" cols="50" id="captionLabel" style="margin-top:6%;
+                 margin-left:25%;" disabled></textarea>
+                <img id="thumbnail" style="height:240px,width:240px" src="Images/placeholder.png" class="img-responsive center-block" onerror="this.onerror = null;this.src = 'Images/placeholder.png';" alt="Photo submitted for description" />
+            </div>
+        </div>
+        <div id="tryAnother">
+            <button id="tryAnotherButton">Try another</button>
+        </div>
+    </div>
+</div>
+
+<form id="idFileUploadForm" name="form1" method="post" enctype="multipart/form-data" action="https://www.BabyBot.ai/api/upload" style="display: none;">
+    <input id="idImageUploadField" name="image1" type="file" accept="image/*" />
+</form>
+
+
+<div class="row" style="background-image:url('Images/bg.jpg'); background-repeat: no-repeat; background-size: 100% 100%" id="imagePicker" >
+    <div id="imageDiv" class="ImageSelector" style="opacity: 0; ">
+        <div id="imageList" class="ScrollArea notSelectedImage">
+            <div class="image" style="background-image:url('Images/upload.jpg')" data-action="upload"></div>
+            </div>
+        <div id="SelectorBox"></div>
+        <div id="SelectorTag">
+            <button id="samplePhotoSelect" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-circle-arrow-right" style="margin-right: 4px" aria-hidden="true"></span>
+                <span class="text">Use this photo</span>
+            </button>
+        </div>
+    </div>
+    <div id="imageUrl" class="row">
+        <h2>Or</h2>
+
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <div class="input-group url-group">
+                <input type="text" id="idTextField" class="form-control" placeholder="Enter the URL to an image" />
+                <div class="btn btn-default" type="button" id="idTextSubmitButton">Go!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bundles/javascript1c6f?v=DiBRnlNRZmQSaqwSPEmKFZli47Vs8yGRCpat2riIrus1"></script>
+
+<script src="bundles/websitece8b?v=RpqB05vcIqk2ckIbY16v6wpSR6CVJ1KNGcjKsK6LGMg1"></script>
+
+<script src="bundles/chat133f?v=zRIwBJ6hZjlrE4Xc-DgpoOvC8VnRzjBdnyx2MfH-FG41"></script>
+
+    </div>
+<script>
+        var localizedStrings = {}
+
+            localizedStrings.THANKS_FEEDBACK = "Thank you for your feedback"
+            localizedStrings.PRIVACY = "Privacy \u0026 Cookies"
+            localizedStrings.MADE_OF = "What I Am Made Of"
+            localizedStrings.SIBLINGS = "My Siblings"
+            localizedStrings.UPLOAD = "Upload a photo"
+            localizedStrings.ANALYZING = "Analyzing image ..."
+            localizedStrings.HOW_DID_I_DO = "How did I do?"
+            localizedStrings.REPORT = "Report abuse"
+            localizedStrings.STORY_TEXT = "BabyBot.ai is powered by machine learning technology that identifies and captions your photos. When you upload a photo, it is sent to The Image Caption and Context Generator for image analysis to return a caption. We won’t store, publish, or let other people use your images. For more information about The Image Caption and Context Generator privacy practices, see our \u003ca href=\"https://go.The Image Caption and Context Generator.com/fwlink/?LinkId=521839\"\u003ePrivacy Statement\u003c/a\u003e"
+            localizedStrings.USE_URL = "Give%20me%20the%20URL%20to%20an%20image.html"
+            localizedStrings.POWERED_BY = "Powered by The Image Caption and Context Generator Cognitive Services"
+            localizedStrings.TRY_ANOTHER = "Try another"
+            localizedStrings.GO = "Go!"
+            localizedStrings.OR = "Or"
+            localizedStrings.MAGIC = "The%20Magic%20behind%20BabyBot.html"
+            localizedStrings.INTRO = "I can understand the content of any photograph and I’ll try to describe it as well as any human. I\u0027ll analyze your photo, but I won\u0027t store or share it. \u003ca href=\u0027/Home/Magic\u0027\u003eLearn More.\u003c/a\u003e"
+            localizedStrings.TERMS = "Terms of Use"
+            localizedStrings.TITLE = "BabyBot - For pictures worth the thousand words"
+            localizedStrings.STORY = "My Story"
+            localizedStrings.TITLE_MAGIC = "BabyBot - The Magic"
+            localizedStrings.USE_THIS = "Use this photo"
+            localizedStrings.TRADEMARK = "Trademark"
+            localizedStrings.OPTIMIZING = "Optimizing image ..."
+            localizedStrings.ALT_UPLOAD = "Photo submitted for description"
+            localizedStrings.UPLOADING = "Uploading image ..."
+            localizedStrings.UNDER_WEATHER = "I seem to be under the weather right now. Try again later :("
+    </script>
+
+    <script src="bundles/bootstrap1b68?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
+
+    <script src="bundles/share5f59?v=8532S6---mQHnhCJeqqr_rl7uemBwAKBln-AMluEVDk1"></script>
+
+    
+    <script>
+        $(function() {
+            $("#language-select").change(function () {
+                var redirectTo = window.location.protocol + "//" + window.location.host + location.pathname + "?lang=" + $("#language-select").val();
+                window.location.href = redirectTo;
+            });
+        });
+    </script>
+</body>
+</html>
