@@ -4,3 +4,12 @@ This is a project based on image captioning and context writing for a given inpu
 The dataset for training the model for caption generation is Flicker8k Dataset which contains around 8000 images and there is Flicker8kText dataset included along with that which is used for caption generation. This dataset contains 5 possible captions for each image in the dataset.
 
 We have used 6000 images for training and 2000 for testing the model.
+
+
+Project Mentor: Mr. Animesh Tayal
+
+Project Members:  Mr. Anugrah Chimanekar
+                  Mr. Veer Kalantri
+                  Mr. Mohit Adlakha
+                  Ms. Aditi Lokhande
+                  Ms. Ayushi Mishra
